@@ -12,12 +12,12 @@ class UserController {
     $this->userService = new UserService(new UserRepository());
   }
 
-  public function index($params = null)
+  public function index()
   {
     return [
       'status_code' => 200,
       'message' => 'Succes get all datas',
-      'data' => $this->userService->getAllUser($params)
+      'data' => $this->userService->getAllUser()
     ];
   }
 

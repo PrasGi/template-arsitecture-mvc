@@ -1,6 +1,6 @@
 <?php 
 
-namespace DTO;
+namespace Dto;
 
 class UserDto {
   public ?string $name = '';

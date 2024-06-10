@@ -9,9 +9,19 @@ class UserRepository {
     Connection::start();
   }
 
-  public function fetch(array $params) :array{
+  public function fetch() :array{
     // manggil database
-    return [];
+    return [
+      [
+        'name' => 'testing 1',
+        'email' => 'testing@example.com',
+        'password' => '123456'
+      ],[
+        'name' => 'testing 2',
+        'email' => 'testing@example.com',
+        'password' => '123456'
+      ]
+    ];
   }
 
   public function getById(string|int $id){

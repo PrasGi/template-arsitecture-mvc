@@ -2,7 +2,7 @@
 
 namespace Services;
 
-use DTO\UserDto;
+use Dto\UserDto;
 use Repository\UserRepository;
 
 class UserService
@@ -14,11 +14,11 @@ class UserService
     $this->userRepository = $userRepository;
   }
 
-  public function getAllUser($data = null)
+  public function getAllUser()
   {
     try {
       // do logic if you have any logic
-      $datas = $this->userRepository->fetch($data);
+      $datas = $this->userRepository->fetch();
       $users = null;
 
       foreach ($datas as $data) {
